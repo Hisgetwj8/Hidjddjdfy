@@ -1,0 +1,71 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+
+local Window = OrionLib:MakeWindow({Name = "Teleport TT", HidePremium = false, SaveConfig = true, IntroEnabled = false})
+
+
+--////////////////////////// PONTOS /////////////////////////////////////
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+
+
+
+--///////////////////////////   FUNC /////////////////////////////////////
+
+--Tp 1
+function TP1()
+    char.HumanoidRootPart.CFrame = CFrame.new(-4177.05176, 4.11474419, -1134.88318, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end
+
+--Tp 2
+function TP2()
+    char.HumanoidRootPart.CFrame = CFrame.new(-3864.14209, 3.41941285, -736.628235, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+end
+
+--///////////////////////////    ABAS    //////////////////////////////////
+
+              local MM = Window:MakeTab({
+                  Name = "Main",
+                  Icon = "rbxassetid://4483345998",
+                  PremiumOnly = false
+              }
+          )
+
+              local TT = Window:MakeTab({
+                  Name = "Teleport",
+                  Icon = "rbxassetid://4483345998",
+                  PremiumOnly = false
+              }
+          )
+
+              local PP = Window:MakeTab({
+                  Name = "Player",
+                  Icon = "rbxassetid://4483345998",
+                  PremiumOnly = false
+              }
+          )
+
+
+--///////////////////////////    local  TT  ///////////////////////////////
+
+
+local Section = TT:AddSection({
+    Name = "Player"
+})
+
+                  TT:AddButton({
+                      Name = "roubar",
+                      Callback = function()
+                          TP1()
+                        end    
+                  }
+              )
+
+                  TT:AddButton({
+                      Name = "Lock pick",
+                      Callback = function()
+                          TP2()
+                        end    
+                  }
+              )
